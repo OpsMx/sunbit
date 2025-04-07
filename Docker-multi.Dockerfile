@@ -28,8 +28,8 @@ EOF
 RUN --mount=type=cache,target=/root/.m2/repository bash mvn.sh
 
 # Stage 2: Final image with JRE (bellsoft/liberica-openjre-alpine-musl:17)
-#FROM bellsoft/liberica-openjre-alpine-musl:17 AS final
-FROM openjdk:17-jdk-alpine AS final
+FROM bellsoft/liberica-openjre-alpine-musl:17 AS final
+#FROM openjdk:17-jdk-alpine AS final
 #FROM eclipse-temurin:21-jdk-jammy AS final
 
 WORKDIR /app
